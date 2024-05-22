@@ -7,15 +7,17 @@ This is a c++ program that provides various graph algorithms and functionalities
 ## Classes:
 
 The two main classes in this assignment are:
-    **Graph.cpp**
-    **Algorythems.cpp**
+* 'Graph.cpp' 
+* 'Algorythems.cpp'
 
 ## Graph:
 
 This class represents a graph that supports both directed and undirected graphs using adjacency matrices.
 
 We have two main functions in this class:
+
     **1. loadGraph -** This function anitializes the graph using a givan adjacency matrix. It will check that the input is valid and set the graphs properties.
+
     **2. printGraph -** this function prints the amount of vertices and edges that are in th graph. 
 
 In addition to the two main functions there are a few helper getter functions that help us use different graph properties. For example we have a function named getNumOfVertices.
