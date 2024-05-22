@@ -16,14 +16,16 @@ We have two main functions in this class:
 1. `loadGraph` - This function anitializes the graph using a givan adjacency matrix. It will check that the input is valid and set the graphs properties.
 2. `printGraph` - this function prints the amount of vertices and edges that are in th graph. 
 
-In addition to the two main functions there are a few helper getter functions that help us use different graph properties. For example we have a function named getNumOfVertices.
+**Helper Functions:**
+
+In addition to the main functions, there are several helper getter functions that allow access to different graph properties. For example, the getNumOfVertices function returns the number of vertices in the graph.
 
 ### Algorithms:
 This class encapsulates various graph algorithms and functionalities.
 
 We have five main functions in this class:
 
-1. `isConnected` - This function determines whether the graph is connected or not. It uses the Depth-First Search (DFS) algorithm to check connectivity. For directed graphs, it performs two DFS traversals to ensure all vertices are reachable from each other. For undirected graphs, a single DFS traversal is used. The function returns true if the graph is connected and false otherwise.
+1. `isConnected` - This function determines whether the graph is connected or not. It uses the Depth-First Search (DFS) algorithm to check connectivity. For directed graphs, it performs two DFS traversals to ensure all vertices are reachable from each other. For undirected graphs, a single DFS traversal is used. The function returns 'true' if the graph is connected and 'false' otherwise.
 
 2. `shortestPath` - Given two vertices, this function calculates the shortest path between them. Depending on the type of graph, it uses different algorithms:
     * BFS -For an unweighted graph
