@@ -75,5 +75,4 @@ int main()
         cout << e.what() << endl; // Should print: "Invalid graph: The graph is not a square matrix."
     }
 
-
 }

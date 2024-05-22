@@ -37,10 +37,6 @@ bool Algorithms::isConnected(const Graph& g){
 
         size_t secondDfsSize = secondDfsCheck.size();
 
-        cout <<"is this the problem?"<<endl;
-        cout << secondDfsSize<< endl;
-        cout << vertices<< endl;
-
         return secondDfsSize == vertices;
     }
     else{

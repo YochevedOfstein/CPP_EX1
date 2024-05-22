@@ -60,7 +60,7 @@ TEST_CASE("Test weighted graph")
 TEST_CASE("Test graph with negative weights")
 {
     ariel::Graph g;
-/*
+
         vector<vector<int>> graph = {
         {0, -1, 2},
         {0, 0, -3},
@@ -72,17 +72,17 @@ TEST_CASE("Test graph with negative weights")
     CHECK(ariel::Algorithms::isBipartite(g) == "The graph is not bipartite");
     CHECK(ariel::Algorithms::negativeCycle(g) == "No negative cycle found");
 
-        vector<vector<int>> graph2 = {
+    vector<vector<int>> graph2 = {
         {0, -1, 0},
         {1, 0, -5},
         {0, 0, 0}};
     g.loadGraph(graph2);
-    CHECK(ariel::Algorithms::isConnected(g) == false);
+    CHECK(ariel::Algorithms::isConnected(g) == true);
     CHECK(ariel::Algorithms::shortestPath(g, 0, 2) == "0 -> 1 -> 2");
     CHECK(ariel::Algorithms::isContainsCycle(g) == "0 -> 1 -> 0");
     CHECK(ariel::Algorithms::isBipartite(g) == "The graph is bipartite: A={0,2}, b={1}");
     CHECK(ariel::Algorithms::negativeCycle(g) == "No negative cycle found");
-    */
+
 }
 
 
@@ -153,8 +153,7 @@ TEST_CASE("Test if a directed graph is connected")
         {0, 0, 1},
         {0, 0, 0}};
     g.loadGraph(graph);
-    CHECK(ariel::Algorithms::isConnected(g) == false);
-
+    CHECK(ariel::Algorithms::isConnected(g) == true);
 
     vector<vector<int>> graph2 = {
         {0, 1, 0},
@@ -162,6 +161,15 @@ TEST_CASE("Test if a directed graph is connected")
         {1, 0, 0}};
     g.loadGraph(graph2);
     CHECK(ariel::Algorithms::isConnected(g) == true);
+
+    vector<vector<int>> graph3 = {
+        {0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0},
+        {0, 1, 0, 1, 0},
+        {0, 3, 0, 0, 2},
+        {0, 0, 4, 0, 0}};
+    g.loadGraph(graph3);
+    CHECK(ariel::Algorithms::isConnected(g) == false);
 
 }
 
@@ -181,6 +189,16 @@ TEST_CASE("Test if an undirected graph is connected")
         {-1, 0, 0}};
     g.loadGraph(graph2);
     CHECK(ariel::Algorithms::isConnected(g) == false);
+
+    vector<vector<int>> graph3 = {
+        {0, 1, 1, 0, 0},
+        {1, 0, 1, 0, 0},
+        {1, 1, 0, 1, 0},
+        {0, 0, 1, 0, 0},
+        {0, 0, 0, 0, 0}};
+    g.loadGraph(graph3);
+    CHECK(ariel::Algorithms::isConnected(g) == false);
+        
 }
 
 TEST_CASE("Test shortest path error")
