@@ -1,4 +1,4 @@
-yocheved@davidowitz.net | 324460682
+yocheved@davidowitz.net
 
 # System Programing 2 - assignmant 1
 
